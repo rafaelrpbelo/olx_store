@@ -1,7 +1,6 @@
 # This file is responsible for configuring your application
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
-
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
 # file won't be loaded nor affect the parent project. For this reason,
@@ -28,3 +27,10 @@ use Mix.Config
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env}.exs"
+
+config :codepagex, :encodings, [
+  :ascii,           # by alias name
+  ~r[iso8859]i,     # by a regex matching the full name
+  "ETSI/GSM0338",   # by the full name as a string
+  :"MISC/CP856"     # by a full name as an atom
+]
