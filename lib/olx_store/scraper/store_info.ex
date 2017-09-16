@@ -1,4 +1,17 @@
 defmodule OlxStore.Scraper.StoreInfo do
+  @moduledoc """
+  This module find informations about a store from a given html text node
+
+  The informations that will be looked up, are:
+  - Store name
+  - Description
+  - Region
+  - Address
+  - Zipcode
+  - Thumbail image url
+  """
+
+  @spec get(String.t) :: %{}
   def get(current_node) do
     info_node = current_node |> Floki.find("div.store-info")
 
