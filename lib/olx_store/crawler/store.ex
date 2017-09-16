@@ -1,4 +1,10 @@
 defmodule OlxStore.Crawler.Store do
+  @moduledoc """
+  This module is a Crawler that will provide the comunication between the
+  app and the store given. It will enable the app to fetch the store's
+  html to parse further.
+  """
+
   use HTTPoison.Base
 
   @endpoint "http://www.olx.com.br/loja/id/"
