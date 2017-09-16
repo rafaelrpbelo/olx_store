@@ -13,7 +13,11 @@ defmodule OlxStore.Mixfile do
        "vcr.delete": :test,
        "vcr.check": :test,
        "vcr.show": :test
-     ]
+     ],
+
+    # Docs
+    name: "OlxStore",
+    source_url: "https://github.com/rafaelrpbelo/olx_store"
    ]
   end
 
@@ -42,7 +46,8 @@ defmodule OlxStore.Mixfile do
       {:floki, "~> 0.18.0"},
       {:httpoison, "~> 0.13.0"},
       {:exvcr, "~> 0.8", only: :test},
-      {:codepagex, "~> 0.1.4"}
+      {:codepagex, "~> 0.1.4"},
+      {:ex_doc, "~> 0.16", only: :dev, runtime: false}
     ]
   end
 end
